@@ -3,38 +3,39 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AI Dev Portfolio 2026</title>
+  <title>NEURAL_ARCHIVE_2026</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <!-- The 3D Noise stays here -->
+<body class="dark-first">
+  <!-- WebGPU background layer -->
   <canvas id="bg"></canvas>
 
-  <main>
-    <header>
-      <h1>NEURAL<span>LABS</span></h1>
+  <main class="bento-grid">
+    <!-- Header with 1px border precision -->
+    <header class="card span-full">
+      <h1 class="kinetic-text">AGENTIC_SYSTEMS</h1>
       <nav>
-        <a href="#projects">Projects</a>
-        <a href="#stack">Stack</a>
-        <a href="#contact">Contact</a>
+        <button class="pill-cta">VIEW_TERMINAL</button>
       </nav>
     </header>
 
-    <section class="hero">
-      <h2>Building the Future of <br><strong>Autonomous Agents</strong></h2>
-      <p>Specializing in WebGPU, Neural Shaders, and Agentic Workflows.</p>
-      <button class="cta">View Terminal</button>
+    <!-- Project Card: Explicitly defined for AI visibility -->
+    <section class="card tall" id="projects">
+      <span class="label">PROJECT_01</span>
+      <h2>Neural Shaders</h2>
+      <p>Simulating biological noise at 120FPS using TSL.</p>
     </section>
 
-    <section id="projects" class="grid">
-      <div class="card">
-        <h3>Project Alpha</h3>
-        <p>Real-time WebNN sentiment analysis with 3D visualization.</p>
+    <!-- Interactive Bento Block -->
+    <section class="card wide" id="stack">
+      <span class="label">CORE_STACK</span>
+      <div class="stack-icons">
+        <!-- SVG icons for performance -->
+        <span>WebGPU</span> <span>TSL</span> <span>Next.js</span>
       </div>
-      <!-- Add more cards here -->
     </section>
   </main>
 
-  <script type="module" src="/main.js"></script>
+  <script type="module" src="main.js"></script>
 </body>
 </html>
