@@ -1,48 +1,46 @@
 :root {
-  --teal: #00f5d4;
-  --glass: rgba(255, 255, 255, 0.03);
+  --neon: #00f5d4; /* Vivid glow accent */
+  --bg: #050505;   /* Dark-First default for sustainability */
 }
 
 body {
   margin: 0;
-  background: #050505;
+  background: var(--bg);
   color: white;
-  font-family: 'Inter', sans-serif;
-  overflow-x: hidden;
+  font-family: 'Monospace', sans-serif; /* Professional utility font */
 }
 
+/* Tactile Friction: Apply a grain filter over the 3D canvas */
 #bg {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: -1; /* Keeps the noise BEHIND the text */
+  z-index: -1;
+  filter: contrast(110%) brightness(90%) grayscale(10%); /* Breaks digital perfection */
 }
 
-main {
-  position: relative;
-  z-index: 1;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem;
-}
-
-.hero {
-  height: 80vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+/* Bento Grid Layout */
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px; /* Borders created by grid gap */
+  background: rgba(255, 255, 255, 0.1); /* Visible grid architecture */
 }
 
 .card {
-  background: var(--glass);
-  backdrop-filter: blur(10px); /* The 2026 "Frosted" look */
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 20px;
+  background: var(--bg);
   padding: 2rem;
-  transition: transform 0.3s ease;
+  border: 1px solid transparent;
+  transition: border-color 0.3s ease;
 }
 
 .card:hover {
-  transform: translateY(-10px);
-  border-color: var(--teal);
+  border-color: var(--neon); /* Interactive brut highlight */
+}
+
+/* Kinetic Typography: Text that stretches on scroll */
+.kinetic-text {
+  font-size: clamp(3rem, 10vw, 8rem);
+  letter-spacing: -2px;
+  text-transform: uppercase;
 }
