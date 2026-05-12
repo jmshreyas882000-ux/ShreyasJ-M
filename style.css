@@ -1,0 +1,48 @@
+:root {
+  --teal: #00f5d4;
+  --glass: rgba(255, 255, 255, 0.03);
+}
+
+body {
+  margin: 0;
+  background: #050505;
+  color: white;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+#bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1; /* Keeps the noise BEHIND the text */
+}
+
+main {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.hero {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card {
+  background: var(--glass);
+  backdrop-filter: blur(10px); /* The 2026 "Frosted" look */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  border-color: var(--teal);
+}
